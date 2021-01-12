@@ -16,6 +16,11 @@ $(document).ready(function () {
 
 
     function mole() {
+        if(score > Number(highScore))
+            {
+                highScore = score;
+                localStorage.setItem("highScore", score);
+            }
         $(".hs").text("HighScore: " + highScore);
 
         if (last != undefined) {
